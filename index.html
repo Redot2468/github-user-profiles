@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body>
+    <!-- background -->
+    <div
+      class="h-screen bg-lightModeBackground dark:bg-darKModeBackground px-8"
+    >
+      <!-- general container width -->
+      <div class="max-w-md mx-auto font-mono md:max-w-xl">
+        <!-- nav -->
+        <div class="flex flex-row justify-between items-center">
+          <!-- logo -->
+          <h2 class="text-black font-bold text-2xl dark:text-white">
+            devfinder
+          </h2>
+
+          <section class="flex flex-row space-x-2 items-center cursor-pointer">
+            <p class="text-lightModeTextColor font-bold dark:text-white">
+              Dark
+            </p>
+            <div class="text-lightModeTextColor">
+              <img src="./assets/icon-moon.svg" alt="" srcset="" class="w-3" />
+              <img
+                src="./assets/icon-sun.svg"
+                alt=""
+                srcset=""
+                class="hidden"
+              />
+            </div>
+          </section>
+        </div>
+
+        <!-- search bar -->
+        <div
+          class="mt-10 border bg-white flex flex-row justify-between py-2 px-3 rounded-2xl"
+        >
+          <button class="w-[10%]">
+            <img src="./assets/icon-search.svg" alt="" srcset="" />
+          </button>
+
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="w-[70%] placeholder:text-sm focus:outline-0"
+            placeholder="Search GitHub username..."
+            required
+          />
+
+          <button
+            class="font-bold bg-iconButtonColor text-white py-3 px-4 rounded-xl hover:opacity-50 transition-opacity"
+          >
+            Search
+          </button>
+        </div>
+        <!-- end of search bar -->
+      </div>
+    </div>
+  </body>
+</html>
