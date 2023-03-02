@@ -13,7 +13,7 @@ module.exports = {
         iconButtonColor:"#0079ff",
         lightModeTextColor:"#697cb4",
         lightNotAvailableColor: "#bbb3ca",
-        darKModeBackground: "#141d2f,",
+        darKModeBackground: "#141d2f",
         darkModeBodyColor: "#1e2a47",
         darkModeTextColor: "#ffffff",
 

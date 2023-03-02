@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <!-- style link -->
     <link rel="stylesheet" href="./dist/style.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bbec75341f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- background -->
     <div
-      class="h-screen bg-lightModeBackground dark:bg-darKModeBackground px-8"
+      class="h-screen py-8 bg-lightModeBackground dark:bg-darKModeBackground px-8 md:flex md:items-center md:justify-center"
     >
       <!-- general container width -->
-      <div class="max-w-md mx-auto font-mono md:max-w-xl">
+      <div class="max-w-lg mx-auto font-mono md:max-w-xl">
         <!-- nav -->
         <div class="flex flex-row justify-between items-center">
           <!-- logo -->
@@ -45,9 +52,9 @@
 
         <!-- search bar -->
         <div
-          class="mt-10 border bg-white flex flex-row justify-between py-2 px-3 rounded-2xl"
+          class="mt-10 bg-white dark:bg-darkModeBodyColor flex flex-row justify-between py-2 px-3 rounded-2xl shadow-lg"
         >
-          <button class="w-[10%]">
+          <button class="p-2">
             <img src="./assets/icon-search.svg" alt="" srcset="" />
           </button>
 
@@ -55,7 +62,7 @@
             type="text"
             name="search"
             id="search"
-            class="w-[70%] placeholder:text-sm focus:outline-0"
+            class="w-[70%] placeholder:text-sm focus:outline-0 p-2 dark:bg-inherit"
             placeholder="Search GitHub username..."
             required
           />
@@ -67,6 +74,123 @@
           </button>
         </div>
         <!-- end of search bar -->
+
+        <!-- main container -->
+        <div
+          class="bg-lightModeBodyColor dark:bg-darkModeBodyColor mt-5 py-8 px-4 md:px-6 rounded-2xl"
+        >
+          <!-- avatar and username -->
+          <div class="flex flex-row flex-auto space-x-7">
+            <!-- avatar -->
+            <img
+              src="./assets/583231.png"
+              alt=""
+              srcset=""
+              class="w-20 rounded-[100%] md:w-28"
+            />
+
+            <!-- username -->
+            <div
+              class="flex flex-col flex-auto space-y-2 md:space-y-0 md:flex-row justify-between w-[70%] md:items-center md:space-x-6"
+            >
+              <section>
+                <h3 class="font-bold text-lg dark:text-white md:text-2xl">
+                  The Octocat
+                </h3>
+                <p class="text-iconButtonColor">@octocat</p>
+              </section>
+
+              <p class="text-lightModeTextColor dark:text-white">
+                Joined Jan 25 2011
+              </p>
+            </div>
+          </div>
+          <!-- end of avatar -->
+
+          <!-- beginning of the rest of the main container -->
+          <div
+            class="flex flex-col flex-auto space-y-7 mt-9 xl:flex-row xl:justify-end"
+          >
+            <div class="space-y-7">
+              <p class="text-lightModeTextColor dark:text-white">
+                This profile has no bio
+              </p>
+
+              <!-- account stats -->
+              <div
+                class="grid grid-cols-3 bg-lightModeBackground dark:bg-darKModeBackground py-5 rounded-2xl"
+              >
+                <!-- repos -->
+                <div class="space-y-2 text-center">
+                  <p class="text-lightModeTextColor text-sm dark:text-white">
+                    Repos
+                  </p>
+                  <h3 class="text-black dark:text-white font-bold text-lg">
+                    8
+                  </h3>
+                </div>
+
+                <!-- followers -->
+                <div class="space-y-2 text-center">
+                  <p class="text-lightModeTextColor text-sm dark:text-white">
+                    Followers
+                  </p>
+                  <h3 class="text-black dark:text-white font-bold text-lg">
+                    8772
+                  </h3>
+                </div>
+
+                <!-- following -->
+                <div class="space-y-2 text-center">
+                  <p class="text-lightModeTextColor text-sm dark:text-white">
+                    Following
+                  </p>
+                  <h3 class="text-black dark:text-white font-bold text-lg">
+                    9
+                  </h3>
+                </div>
+              </div>
+              <!-- end of account stats -->
+
+              <!-- account details -->
+              <div class="grid grid-cols-1 gap-y-6 md:grid-cols-2">
+                <!-- location -->
+                <div
+                  class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p class="text-sm">San Francisco</p>
+                </div>
+
+                <!-- github link -->
+                <div
+                  class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
+                >
+                  <i class="fa-solid fa-link"></i>
+                  <p class="text-sm">
+                    <a href="https://github.blog">https://github.blog</a>
+                  </p>
+                </div>
+
+                <!-- twitter -->
+                <div
+                  class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                  <p class="text-sm">Not Available</p>
+                </div>
+
+                <!-- @githubusername -->
+                <div
+                  class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
+                >
+                  <i class="fa-solid fa-building"></i>
+                  <p class="text-sm">@github</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
