@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,17 +34,26 @@
             devfinder
           </h2>
 
-          <section class="flex flex-row space-x-2 items-center cursor-pointer">
+          <section
+            class="mode flex flex-row space-x-2 items-center cursor-pointer"
+          >
             <p class="text-lightModeTextColor font-bold dark:text-white">
               Dark
             </p>
             <div class="text-lightModeTextColor">
-              <img src="./assets/icon-moon.svg" alt="" srcset="" class="w-3" />
+              <img
+                src="./assets/icon-moon.svg"
+                alt=""
+                srcset=""
+                class="img1 w-3"
+                id="img1"
+              />
               <img
                 src="./assets/icon-sun.svg"
                 alt=""
                 srcset=""
-                class="hidden"
+                class="hidden img2"
+                id="img2"
               />
             </div>
           </section>
@@ -62,13 +71,13 @@
             type="text"
             name="search"
             id="search"
-            class="w-[70%] placeholder:text-sm focus:outline-0 p-2 dark:bg-inherit"
+            class="search__input w-[70%] placeholder:text-sm focus:outline-0 p-2 dark:bg-inherit"
             placeholder="Search GitHub username..."
             required
           />
 
           <button
-            class="font-bold bg-iconButtonColor text-white py-3 px-4 rounded-xl hover:opacity-50 transition-opacity"
+            class="submit__btn font-bold bg-iconButtonColor text-white py-3 px-4 rounded-xl hover:opacity-50 transition-opacity"
           >
             Search
           </button>
@@ -86,7 +95,7 @@
               src="./assets/583231.png"
               alt=""
               srcset=""
-              class="w-20 rounded-[100%] md:w-28"
+              class="avatar w-20 rounded-[100%] md:w-28"
             />
 
             <!-- username -->
@@ -94,13 +103,13 @@
               class="flex flex-col flex-auto space-y-2 md:space-y-0 md:flex-row justify-between w-[70%] md:items-center md:space-x-6"
             >
               <section>
-                <h3 class="font-bold text-lg dark:text-white md:text-2xl">
+                <h3 class="name font-bold text-lg dark:text-white md:text-2xl">
                   The Octocat
                 </h3>
-                <p class="text-iconButtonColor">@octocat</p>
+                <p class="username text-iconButtonColor">@octocat</p>
               </section>
 
-              <p class="text-lightModeTextColor dark:text-white">
+              <p class="joined__date text-lightModeTextColor dark:text-white">
                 Joined Jan 25 2011
               </p>
             </div>
@@ -112,7 +121,7 @@
             class="flex flex-col flex-auto space-y-7 mt-9 xl:flex-row xl:justify-end"
           >
             <div class="space-y-7">
-              <p class="text-lightModeTextColor dark:text-white">
+              <p class="bio text-lightModeTextColor dark:text-white">
                 This profile has no bio
               </p>
 
@@ -125,7 +134,9 @@
                   <p class="text-lightModeTextColor text-sm dark:text-white">
                     Repos
                   </p>
-                  <h3 class="text-black dark:text-white font-bold text-lg">
+                  <h3
+                    class="repos text-black dark:text-white font-bold text-lg"
+                  >
                     8
                   </h3>
                 </div>
@@ -135,7 +146,9 @@
                   <p class="text-lightModeTextColor text-sm dark:text-white">
                     Followers
                   </p>
-                  <h3 class="text-black dark:text-white font-bold text-lg">
+                  <h3
+                    class="followers text-black dark:text-white font-bold text-lg"
+                  >
                     8772
                   </h3>
                 </div>
@@ -145,7 +158,9 @@
                   <p class="text-lightModeTextColor text-sm dark:text-white">
                     Following
                   </p>
-                  <h3 class="text-black dark:text-white font-bold text-lg">
+                  <h3
+                    class="following text-black dark:text-white font-bold text-lg"
+                  >
                     9
                   </h3>
                 </div>
@@ -159,15 +174,15 @@
                   class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
                 >
                   <i class="fa-solid fa-location-dot"></i>
-                  <p class="text-sm">San Francisco</p>
+                  <p class="details location text-sm">San Francisco</p>
                 </div>
 
                 <!-- github link -->
                 <div
-                  class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
+                  class="flex flex-row overflow-hidden space-x-3 text-lightModeTextColor dark:text-white whitespace-normal"
                 >
                   <i class="fa-solid fa-link"></i>
-                  <p class="text-sm">
+                  <p class="html__url text-sm">
                     <a href="https://github.blog">https://github.blog</a>
                   </p>
                 </div>
@@ -177,15 +192,15 @@
                   class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
                 >
                   <i class="fa-brands fa-twitter"></i>
-                  <p class="text-sm">Not Available</p>
+                  <p class="details twitter text-sm">Not Available</p>
                 </div>
 
-                <!-- @githubusername -->
+                <!-- @githubcompanyusername -->
                 <div
                   class="flex flex-row space-x-3 text-lightModeTextColor dark:text-white"
                 >
                   <i class="fa-solid fa-building"></i>
-                  <p class="text-sm">@github</p>
+                  <p class="details company text-sm">@github</p>
                 </div>
               </div>
             </div>
@@ -193,5 +208,8 @@
         </div>
       </div>
     </div>
+
+    <!-- script -->
+    <script src="./script.js"></script>
   </body>
 </html>
